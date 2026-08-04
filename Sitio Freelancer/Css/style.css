@@ -1,0 +1,66 @@
+:root {
+
+    --blanco: #ffffff;
+    --negro: #212121;
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    --gris: #757575;
+    
+
+
+
+
+}
+
+html {
+
+    font-size: 62.5%;
+}
+
+body {
+
+    font-size: 16px;
+    font-family: "Krub", sans-serif;
+
+}
+
+.titulo {
+    text-align: center;
+    font-size: 3.8rem;
+    color: var(--negro);
+    font-family: "Krub", sans-serif;
+    
+
+}
+
+.titulo span {
+    font-size: 2rem;
+}
+
+
+.nav-bg{
+background-color: var(--secundario);
+
+
+}
+.contenedor{
+width: 120rem;
+margin: 0 auto;
+}
+
+.navegacion-principal{
+padding: 1rem;
+text-align: center;
+display: flex;
+justify-content: space-around;
+
+
+}
+
+
+.navegacion-principal a{
+    color: var(--blanco);
+    text-decoration: none;
+    
+
+}
