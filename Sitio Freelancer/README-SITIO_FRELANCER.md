@@ -19,6 +19,8 @@ El proyecto fue construido utilizando únicamente tecnologí as base de la web, 
 * **Variables Nativas (Custom Properties):** Declaración de una paleta de colores global en el pseudo-selector `:root` para un código más limpio y fácil de mantener.
 * **Manejo de Medidas (REM):** Configuración técnica ajustando el `font-size` del `html` al `62.5%`. Esto permite utilizar la unidad relativa `rem` de forma más intuitiva (donde `1rem` = `10px`).
 * **Selectores:** Uso adecuado de selectores de clase e id para la manipulación de los estilos de la página.
+* Estilo de escritura: Escritura de estilos css mediante modulos.
+* Flexbox: Aplicacion de flexbox en la pagina para definir la direccion de elementos como la navegacion.
 
 ## 🚀 Estructura del Proyecto
 
