@@ -61,6 +61,6 @@ justify-content: space-around;
 .navegacion-principal a{
     color: var(--blanco);
     text-decoration: none;
-    
-
+    font-size: 2rem;
+    font-weight: bold;
 }
