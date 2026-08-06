@@ -32,16 +32,30 @@ body {
 
 }
 
-.titulo {
-    text-align: center;
-    font-size: 3.8rem;
-    color: var(--negro);
-    font-family: "Krub", sans-serif;
 
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 2.8rem;
 
 }
 
-.titulo span {
+h3 {
+    font-size: 1.8rem;
+
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+
+
+span {
     font-size: 2rem;
 }
 
@@ -55,6 +69,29 @@ body {
 .contenedor {
     max-width: 120rem;
     margin: 0 auto;
+}
+
+.boton {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    border-radius: .5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 80%;
+    text-align: center;
+}
+
+@media(min-width :768px) {
+
+    .boton {
+        width: auto;
+
+    }
+
 }
 
 .navegacion-principal {
@@ -102,7 +139,47 @@ body {
     background-image: url(/Sitio\ Freelancer/Imagenes/hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 410px;
-    padding: 20px;
+    height: 450px;
+    position: relative;
+
+}
+
+.contenido-hero {
+
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+
+    /* Alinear tanto horizontal como vertical con flexbox */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+
+
+
+
+
+
+}
+
+
+.contenido-hero h2,
+.contenido-hero p {
+
+    color: var(--blanco);
+
+
+
+}
+
+.contenido-hero svg {
+
+    color: var(--primario);
 
 }
