@@ -5,7 +5,7 @@
     --primario: #ffc107;
     --secundario: #0097a7;
     --gris: #757575;
-    
+
 
 
 
@@ -29,7 +29,7 @@ body {
     font-size: 3.8rem;
     color: var(--negro);
     font-family: "Krub", sans-serif;
-    
+
 
 }
 
@@ -38,38 +38,53 @@ body {
 }
 
 
-.nav-bg{
-background-color: var(--secundario);
-
-
-}
-.contenedor{
-width: 120rem;
-margin: 0 auto;
-}
-
-.navegacion-principal{
-
-text-align: center;
-display: flex;
-justify-content: space-around;
+.nav-bg {
+    background-color: var(--secundario);
 
 
 }
 
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
 
-.navegacion-principal a{
+.navegacion-principal {
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+
+.navegacion-principal a {
     color: var(--blanco);
     text-decoration: none;
     font-size: 2rem;
     font-weight: bold;
     padding: 1rem;
 }
-.navegacion-principal a:hover{
 
-background-color: var(--primario);
-color:var(--negro);
-border-radius: 1rem;
+.navegacion-principal a:hover {
+
+    background-color: var(--primario);
+    color: var(--negro);
+    border-radius: 1rem;
+
+
+
+}
+
+@media (min-width: 768px) {
+
+    .navegacion-principal {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+
+    }
 
 
 
