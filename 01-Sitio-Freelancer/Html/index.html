@@ -7,26 +7,17 @@
     <title>Diseñador Frelancer</title>
 
 
-    <link rel="stylesheet" href="/01-Sitio-Freelancer/Css/normalize.css">
-    <link rel="preload" href="/01-Sitio-Freelancer/Css/normalize.css">
-
-    <link rel="stylesheet" href="/01-Sitio Freelancer/Css/normalize.css">
-    <link rel="preload" href="/01-Sitio Freelancer/Css/normalize.css">
-
-
-
-
+    <link rel="preload" href="../Css/normalize.css" as="style">
+    <link rel="stylesheet" href="../Css/normalize.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
 
 
-    <link rel="preload" href="/01-Sitio-Freelancer/Css/normalize.css" as="style">
-    <link rel="stylesheet" href="/01-Sitio-Freelancer/Css/style.css">
+    <link rel="preload" href="../Css/style.css" as="style">
+    <link rel="stylesheet" href="../Css/style.css">
 
-    <link rel="preload" href="/01-Sitio Freelancer/Css/normalize.css" as="style">
-    <link rel="stylesheet" href="/01-Sitio Freelancer/Css/style.css">
 
 
 
@@ -142,6 +133,7 @@
                         <path d="M19 16l3 3l-3 3" />
                         <path d="M7.005 15h.005" />
                         <path d="M11 15h2" />
+                    </svg>
                 </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur dolores voluptatem alias eum
                     molestias ipsum
@@ -151,43 +143,51 @@
                     perspiciatis nobis cum.</p>
             </section>
         </div><!-- Servivios -->
+
+
+        <section>
+            <h2>Contacto</h2>
+
+            <form class="formulario">
+                <fieldset>
+                    <legend>Contacateme llenando todos los datos</legend>
+
+
+                    <div class="contenedor-campos">
+                        <div class="campo">
+                            <label for="nombre">Nombre</label>
+                            <input class="input-text" type="text" name="nombre" id="nombre"
+                                placeholder="Ingrese su nombre">
+                        </div>
+                        <div class="campo">
+                            <label for="telefono">Telefono</label>
+                            <input class="input-text" type="tel" name="telefono" id="telefono"
+                                placeholder="Ingrese su telefono">
+                        </div>
+                        <div class="campo">
+                            <label for="correo">Correo</label>
+                            <input class="input-text" type="email" name="correo" id="correo" placeholder="mail">
+                        </div>
+                        <div class="campo">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea class="input-text" name="mensaje" id="mensaje"></textarea>
+                        </div>
+                    </div><!-- CONTENEDOR CAMPOS -->
+
+                    <div class="alinear-derecha">
+                        <input class="boton w-100" class="input-text" type="submit" value="Enviar">
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+
+
+
+
     </main>
 
 
-    <section>
-        <h2>Contacto</h2>
-    </section>
-
-    <form>
-        <fieldset>
-            <legend>Contacateme llenando todos los datos</legend>
-
-            <div>
-                <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre">
-            </div>
-            <div>
-                <label for="telefono">Telefono</label>
-                <input type="tel" name="telefono" id="telefono" placeholder="Ingrese su telefono">
-            </div>
-            <div>
-                <label for="correo">Correo</label>
-                <input type="email" name="correo" id="correo" placeholder="mail">
-            </div>
-            <div>
-                <label for="mensaje">Mensaje</label>
-                <textarea name="mensaje" id="mensaje"></textarea>
-            </div>
-
-            <input type="submit" value="Enviar">
-        </fieldset>
-
-
-
-
-    </form>
-
-    <footer>
+    <footer class="footer">
         <p>Todos los derechos reservados. Juan Jose Roman Bernal Frelancer</p>
 
 
