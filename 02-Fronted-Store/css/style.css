@@ -97,6 +97,24 @@ margin:3rem 0;
 
 }
 
+/* Footer */
+
+.footer{
+    width: 100%;
+    background-color: var(--primario-claro);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.footer__texto{
+    font-family:var(--fuentePrincipal);
+    text-align: center;
+    font-size: 2.2rem;
+
+}
+
+
+
 /* Navegacion */
 .navegacion{
 
