@@ -198,9 +198,10 @@ h1 {
 
 .grafico {
     min-height: 30rem;
-    background-size: cover;/* Esto hace que tome todo el ancho disponible y la imagen no se vea cortada */
+    background-size: cover;
+    /* Esto hace que tome todo el ancho disponible y la imagen no se vea cortada */
     grid-column: 1/3;
-    
+
 
 }
 
@@ -222,15 +223,30 @@ h1 {
         background-image: url(../img/grafico2.jpg);
         grid-row: 5/6;
         grid-column: 2/4;
-        background-repeat: no-repeat;/* para que no se repita la imagen */
+        background-repeat: no-repeat;
+        /* para que no se repita la imagen */
 
     }
-    
-    .grafico--camisas{
-    
-    background-repeat: no-repeat;
-    
+
+    .grafico--camisas {
+
+        background-repeat: no-repeat;
+
     }
 
 }
 
+
+/* Nosotros.index 
+
+
+.nosotros{
+
+}
+
+.nosotros{
+
+
+}
+
+*/
