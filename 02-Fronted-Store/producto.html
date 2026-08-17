@@ -11,13 +11,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../02-Fronted-Store/css/normalize.css">
-    <link rel="preload" href="../02-Fronted-Store/css/normalize.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="preload" href="./css/normalize.css">
 
 
 
-    <link rel="stylesheet" href="../02-Fronted-Store/css/style.css">
-    <link rel="preload" href="../02-Fronted-Store/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preload" href="./css/style.css">
 
 
     <title>Producto</title>
@@ -29,7 +29,7 @@
 
     <header class="header">
         <a href="index.html">
-            <img class="header__logo" src="/02-Fronted-Store/img/logo.png" alt="logo">
+            <img class="header__logo" src="./img/logo.png" alt="logo">
         </a>
     </header>
 
@@ -41,7 +41,42 @@
 
     <main class="contenedor">
 
-        <h1>Producto</h1>
+        <h1>React Js</h1>
+
+        <div class="camisa">
+
+            <img src="./img/3.jpg" alt="" class="camisa__imagen">
+
+            <div class="camisa__contenido">
+
+                <p class="camisa__descripcion">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore
+                    voluptates quos, similique inventore architecto illo odit nam suscipit aperiam aspernatur debitis
+                    possimus beatae minus earum impedit deserunt error quasi eius.</p>
+
+
+                <form class="formulario">
+
+                    <select class="formulario__campo">
+                    <option disabled selected>--Seleccionar talla--</option>
+                        <option value="">chica</option>
+                        <option value="">mediana</option>
+                        <option value="">grande</option>
+
+                    </select>
+
+                    <input class="formulario__campo" type="number" placeholder="Cantidad" min="1">
+                    
+                    
+                    <input class="formulario__submit"type="submit" value="Agregar al carrito">
+
+
+
+                </form>
+            </div>
+
+        </div>
+
+
 
 
     </main>
