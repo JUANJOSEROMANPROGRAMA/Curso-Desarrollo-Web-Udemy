@@ -40,8 +40,15 @@ body {
 
 
 .contenedor {
-    max-width: 120rem;
-    width: 90%;
+    /* max-width: 120rem;
+    width: 90%; 
+    
+    estas lineas es el 90% para que el contenido no tome todo el espacio y se vaya hasta los bordes en celulares pequeños y el max-with toma maximos 1200 px
+    */ 
+    
+    width:min(90%,120rem) ;/* esta linea resume todo lo de arriba  */
+    
+    
     margin: 0 auto;
 
 }
@@ -105,6 +112,10 @@ img {
 
 
 /* Header */
+.barra{
+    padding-top: 3rem;
+
+}
 
 .header {
 
@@ -246,33 +257,43 @@ img {
 /*Cusrso */
 
 
-.cursos{
-list-style: none;
+.cursos {
+    list-style: none;
 
 }
 
-.widget__cursos{
+.widget__cursos {
     border-bottom: 1px solid var(--gris);
     margin-bottom: 2rem;
 }
 
-.widget__cursos:last-of-type{
-    border-bottom:none;
+.widget__cursos:last-of-type {
+    border-bottom: none;
     margin-bottom: 0;
 
 }
 
-.widget-curso__label{
+.widget-curso__label {
 
-font-family: var(--fuenteHeading);
-font-weight: bold;
-text-transform: capitalize;
-font-size: 2rem;
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 2rem;
 }
 
 
-.widget-curso__info{
-font-size: 2rem;
+.widget-curso__info {
+    font-size: 2rem;
 
-font-weight: 400;
+    font-weight: 400;
+}
+
+
+/* footer */
+
+.footer {
+    background-color: var(--negro);
+    padding: 3rem 0;
+    margin-top: 4rem;
+
 }
