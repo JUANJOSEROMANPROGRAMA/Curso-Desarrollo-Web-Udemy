@@ -319,3 +319,42 @@ img {
 
 
 }
+
+
+
+/* cursos */
+    .curso{
+    
+    padding: 3rem 0;
+    border-bottom:1px var(--negro) solid;
+    
+    }
+    
+    .curso:last-of-type{
+    
+    border: none;
+    }
+@media(min-width : 768px) {
+    
+    .curso{
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    column-gap: 3rem;
+    }
+    
+}
+
+.curso__label {
+
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 2rem;
+}
+
+
+.curso__info {
+    font-size: 2rem;
+
+    font-weight: 400;
+}
