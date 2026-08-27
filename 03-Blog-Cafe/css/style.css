@@ -44,11 +44,12 @@ body {
     width: 90%; 
     
     estas lineas es el 90% para que el contenido no tome todo el espacio y se vaya hasta los bordes en celulares pequeños y el max-with toma maximos 1200 px
-    */ 
-    
-    width:min(90%,120rem) ;/* esta linea resume todo lo de arriba  */
-    
-    
+    */
+
+    width: min(90%, 120rem);
+    /* esta linea resume todo lo de arriba  */
+
+
     margin: 0 auto;
 
 }
@@ -112,7 +113,7 @@ img {
 
 
 /* Header */
-.barra{
+.barra {
     padding-top: 3rem;
 
 }
@@ -295,5 +296,26 @@ img {
     background-color: var(--negro);
     padding: 3rem 0;
     margin-top: 4rem;
+
+}
+
+/*  nosotros */
+
+.sobre-nosotros__imagen {
+    margin: 0 auto;
+}
+
+@media(min-width : 768px) {
+
+
+    .sobre-nosotros {
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+
+    }
+
+
 
 }
