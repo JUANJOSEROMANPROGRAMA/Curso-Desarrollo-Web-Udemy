@@ -41,7 +41,7 @@ var producto1 = 'compuadora',
 /* eStilos de variables */
 
 
-var nombre_producto = 'monitor HD';/* underscode */
+var let = 'monitor HD';/* underscode */
 var nombreProducto = 'monitor HD';/* camelcase */
 var NombreProducto = 'monitor HD'; /* PascalCase */
 var nombreproductp = 'monitor HD';/* lowercase */
