@@ -29,4 +29,10 @@ const reservacion = {
 reservacion.informacion()
 
 
-/* Hace referencia a vparametros de un objeto , y la palabra this esta reservada para no tener que modificar las variables dentro del objeeto y sus funciones */
+/* Hace referencia a vparametros de un objeto , y la palabra this esta reservada para no tener que modificar las variables dentro del objeeto y sus funciones 
+
+
+this permite acceder a las propiedades del objeto desde uno de sus métodos sin tener que escribir el nombre del objeto directamente.
+
+
+*/
