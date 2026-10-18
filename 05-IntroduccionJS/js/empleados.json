@@ -1,0 +1,53 @@
+{
+    "empleados": [
+    
+    {
+    
+    "id":1,
+    "nombre":"JuanJose",
+    "ocupacion":"Ingeniero Informatica"
+    
+    
+    },
+    {
+    
+    "id":2,
+    "nombre":"Valentina",
+    "ocupacion":"Chef Profesional"
+    
+    
+    },
+    
+    {
+    
+    "id":3,
+    "nombre":"Juan Manuel",
+    "ocupacion":"Ingeniero Informatica"
+    
+    
+    },
+    
+    {
+    
+    "id":4,
+    "nombre":"Aleida",
+    "ocupacion":" Directora de ventas internacionales"
+    
+    
+    },
+    
+    {
+    
+    "id":5,
+    "nombre":"Arley",
+    "ocupacion":"Conductor "
+    
+    
+    }
+    
+    
+    
+    
+    
+    ]
+}
