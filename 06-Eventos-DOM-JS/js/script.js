@@ -60,3 +60,40 @@ enlaces[1].remove('navegacion__enlace')
 //****************************       geteElementById**************************
 
 const heading2 = document.getElementById('heading')
+
+
+
+
+//****************************       Creando HTML con createElement***************************
+
+
+
+
+
+
+
+
+/* Generar el nuevo enlace */
+const nuevoEnlace = document.createElement('A')
+
+
+/* agregar el href de la pagina a la cual se dirige */
+nuevoEnlace.href ='nueva-pag.html'
+
+/* agregar el texto */
+nuevoEnlace.textContent = 'Enlace agregado desdel JS'
+
+
+/* agregar la clase */
+
+nuevoEnlace.classList.add('navegacion_enlace');
+
+
+/* agregarlo al documento */
+
+
+const navegacion = document.querySelector('.navegacion')
+navegacion.appendChild(nuevoEnlace)
+
+
+console.log(nuevoEnlace)
