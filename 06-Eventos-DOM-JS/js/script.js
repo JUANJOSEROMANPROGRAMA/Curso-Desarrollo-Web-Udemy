@@ -160,9 +160,144 @@ const btnEnviar = document.querySelector('.boton--primario');
 
 
 /* Previene la accion por default de un submit, sin esta linea de codigo al realizar el click la pagina se refrescaria, es util para validar un formulario y verificar que los camps esten llenos para enviar los datos a un servidor */
-btnEnviar.addEventListener('click', function (evento) {
+// btnEnviar.addEventListener('click', function (evento) {
 
-    console.log(evento);
+//     console.log(evento);
+//     evento.preventDefault();
+//     console.log('Enviando Formulario');
+// })
+
+/* este es util para imagenes,textos y cualquier elementos*/
+
+//****************************    Eventos de los input o textArea   ***************************
+
+
+
+
+/* este es el objeto de datos donde se van a a guardar los datos del Formulario....IMPORTANTE....los nombres deben ser tal cual a los is de los input de los que se va a registrar  */
+const datos = {
+
+    nombre: ' ',
+    email: ' ',
+    mensaje: ' '
+
+
+}
+
+
+const nombre = document.querySelector('#nombre');
+const email = document.querySelector('#email');
+const mensaje = document.querySelector('#mensaje');
+const formulario = document.querySelector('.formulario');
+
+
+nombre.addEventListener('input', leerTexto);
+email.addEventListener('input', leerTexto);
+
+mensaje.addEventListener('input', leerTexto);
+
+
+/* 
+1. el change se ejecuta hasta que se salga del input
+2. input se hace en tiempo real por cada vez que se escribe
+*/
+
+
+
+/* El evento del Submit */
+formulario.addEventListener('submit', function (evento) {
     evento.preventDefault();
-    console.log('Enviando Formulario');
+
+
+    //Validar el formulario
+
+    const { nombre, email, mensaje } = datos;
+
+    console.log(nombre);
+    console.log(email);
+    console.log(mensaje);
+
+
+
+
+    //Enviar el formulario
+
+    if (nombre === ' ' || email === ' ' || mensaje === ' ') //verificando que el nombre o email o mensaje no esten vacios
+    {
+        mostrarError('Todos los campos son obligatorios');
+
+        return;// corta la ejecucion del codigo de manera que si no se cumple el if no siga con e resto de codigo
+    }
+
+
+
+    MostrarCorrecto('Formulario enviado correctamente');
+
 })
+
+/* Para formularios es mejor usar el submir enlazado a la clase del formulario(obligatoriamente debe de tener un boton tipo submit en el formulario) */
+
+
+
+function leerTexto(e) {
+
+
+    // console.log(e.target.value);
+    datos[e.target.id] = e.target.value
+
+    // console.log(datos)
+
+}
+
+
+/* Funcion que muestra un error en panatalla */
+
+
+function mostrarError(mensaje) {
+
+    const error = document.createElement('p');
+    error.textContent = mensaje;
+    error.classList.add('error');
+
+
+    formulario.appendChild(error);
+    console.log(error);
+
+
+
+    //desaparezca despues de 5 segundos
+
+    setTimeout(() => {
+        error.remove();
+    }, 5000);
+
+}
+
+
+/* funcion que alerta que se envio correctamente */
+
+function MostrarCorrecto(mensaje) {
+
+    //crea la variable alerta que sera usada para crear un parrafo en el HTML
+    const alerta = document.createElement('P');
+
+        //Se le asigna el mensaje que paso por parametro de la funcion a la variable
+    alerta.textContent = mensaje;
+    
+    
+    //se le agrega la clase correcto a la variable 
+    alerta.classList.add('correcto');
+
+
+    //se agrega la alerta al formulario
+    formulario.appendChild(alerta)
+
+
+
+    //  que el mensaje desaparezca a los 3s
+    setTimeout(() => {
+        alerta.remove();
+    }, 3000);
+
+
+}
