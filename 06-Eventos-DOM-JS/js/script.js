@@ -224,14 +224,14 @@ formulario.addEventListener('submit', function (evento) {
 
     if (nombre === ' ' || email === ' ' || mensaje === ' ') //verificando que el nombre o email o mensaje no esten vacios
     {
-        mostrarError('Todos los campos son obligatorios');
+        mostrarAlerta('Todos los campos son obligatorios', 'error');
 
         return;// corta la ejecucion del codigo de manera que si no se cumple el if no siga con e resto de codigo
     }
 
 
 
-    MostrarCorrecto('Formulario enviado correctamente');
+    mostrarAlerta('Formulario enviado correctamente');
 
 })
 
@@ -250,54 +250,82 @@ function leerTexto(e) {
 }
 
 
-/* Funcion que muestra un error en panatalla */
+// /* Funcion que muestra un error en panatalla */
 
 
-function mostrarError(mensaje) {
+// function mostrarError(mensaje) {
 
-    const error = document.createElement('p');
-    error.textContent = mensaje;
-    error.classList.add('error');
-
-
-    formulario.appendChild(error);
-    console.log(error);
+//     const error = document.createElement('p');
+//     error.textContent = mensaje;
+//     error.classList.add('error');
 
 
-
-    //desaparezca despues de 5 segundos
-
-    setTimeout(() => {
-        error.remove();
-    }, 5000);
-
-}
+//     formulario.appendChild(error);
+//     console.log(error);
 
 
-/* funcion que alerta que se envio correctamente */
 
-function MostrarCorrecto(mensaje) {
+//     //desaparezca despues de 5 segundos
 
-    //crea la variable alerta que sera usada para crear un parrafo en el HTML
-    const alerta = document.createElement('P');
+//     setTimeout(() => {
+//         error.remove();
+//     }, 5000);
 
-        //Se le asigna el mensaje que paso por parametro de la funcion a la variable
+// }
+
+
+// /* funcion que alerta que se envio correctamente */
+
+// function MostrarCorrecto(mensaje) {
+
+//     //crea la variable alerta que sera usada para crear un parrafo en el HTML
+//     const alerta = document.createElement('P');
+
+//     //Se le asigna el mensaje que paso por parametro de la funcion a la variable
+//     alerta.textContent = mensaje;
+
+
+//     //se le agrega la clase correcto a la variable 
+//     alerta.classList.add('correcto');
+
+
+//     //se agrega la alerta al formulario
+//     formulario.appendChild(alerta)
+
+
+
+//     //  que el mensaje desaparezca a los 3s
+//     setTimeout(() => {
+//         alerta.remove();
+//     }, 3000);
+
+
+// }
+
+
+/* esta funcion es para tener las alaertas en una sola funcion en vez de 2 */
+
+function mostrarAlerta(mensaje, error = null) {
+
+    const alerta = document.createElement('p');
+
     alerta.textContent = mensaje;
-    
-    
-    //se le agrega la clase correcto a la variable 
-    alerta.classList.add('correcto');
 
 
-    //se agrega la alerta al formulario
+    if (error) {
+        alerta.classList.add('error');
+
+
+    } else {
+
+        alerta.classList.add('correcto')
+
+    }
+
     formulario.appendChild(alerta)
 
-
-
-    //  que el mensaje desaparezca a los 3s
     setTimeout(() => {
         alerta.remove();
     }, 3000);
-
 
 }
