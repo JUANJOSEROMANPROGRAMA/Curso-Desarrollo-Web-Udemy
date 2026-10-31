@@ -17,12 +17,17 @@
   },
   "license": "ISC",
   "author": "Juan Jose Roman Bernal @JUANJOSEROMANPROGRAMA",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "sass": "sass src/scss:build/css"
+    "sass": "sass --watch src/scss:build/css",
+    "hola": "gulp hola"
+    
   },
   "devDependencies": {
     "sass": "^1.107.1"
+  },
+  "dependencies": {
+    "gulp": "^5.0.1"
   }
 }
