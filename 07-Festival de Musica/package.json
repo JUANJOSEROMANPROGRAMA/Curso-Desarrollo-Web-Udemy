@@ -1,0 +1,25 @@
+{
+  "name": "07-festival-de-musica",
+  "version": "1.0.0",
+  "description": "Aprendiendo SASS y NPM",
+  "keywords": [
+    "SASS",
+    "NPM",
+    "Gulp"
+  ],
+  "homepage": "https://github.com/JUANJOSEROMANPROGRAMA/Curso-Desarrollo-Web-Udemy#readme",
+  "bugs": {
+    "url": "https://github.com/JUANJOSEROMANPROGRAMA/Curso-Desarrollo-Web-Udemy/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JUANJOSEROMANPROGRAMA/Curso-Desarrollo-Web-Udemy.git"
+  },
+  "license": "ISC",
+  "author": "Juan Jose Roman Bernal @JUANJOSEROMANPROGRAMA",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
