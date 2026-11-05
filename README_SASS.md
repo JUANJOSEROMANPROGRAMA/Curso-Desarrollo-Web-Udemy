@@ -17,7 +17,6 @@ CSS con superpoderes
 
 # Sintaxis de SASS
 
-
 ```
 // VARIABLES
 $color :#e1e1e1;
@@ -38,7 +37,6 @@ p{
 }
 
 ```
-
 
 ## Anidacion SASS
 
@@ -71,19 +69,55 @@ div p{
 }
 ```
 
-
 ## Extensiones de SASS
-
-
 
 ### .sass
 
 ```
-
-
-
 .hader
       display:flex;
       .logo
           margin-top:10rem;
 ```
+
+
+### .scss
+
+
+```
+.header{
+
+    disply:flex;
+    .logo{
+          maring-top:10rem;
+    }
+}
+```
+
+
+## SASS se compila
+
+No es soportado nativmnete por el navegador , por lo tanto debera ser compulado a un archivo .css
+
+se utiliza una herramienta llamda Gulp.js
+
+
+## Gulp.js
+
+Gulp es una herramienta que nos ayudara a automatizar tareas repetitivas en desarrollo web tales como:
+
+* compilar SASS y JS
+* Crear imagenes ligeras
+* minificar codigo de produccion
+
+se requiere instalar Node.js y NPM para poder usar Gulp.js
+
+
+## ¿Que es Node.js?
+
+Es un entorno que permite ejecutar JavaScript en el servidor.
+
+
+## ¿Que es NPM?
+
+Node Package Manager , es un sistema de gestion de paquetes para el lenguaje de programacion JavaScript. el es administrador de paquetes por defecto para el entorno de ejecuccion de Node.js
