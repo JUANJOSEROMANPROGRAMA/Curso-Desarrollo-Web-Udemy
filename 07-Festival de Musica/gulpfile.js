@@ -48,7 +48,7 @@ export function dev(){
 
 
 /* el watch es una funcion predeterminada que se puede importar desde watch....solo seria llamar la funcion y pasarle como parametro cual es el archivo al que se desea que se le haga seguimiento */
-    watch('src/scss/app.scss',css)
+    watch('src/scss/**/*.scss',css)
     
     
 
