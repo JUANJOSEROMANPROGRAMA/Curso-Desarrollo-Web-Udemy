@@ -33,3 +33,9 @@ si las dependecnias no se necesitan exportar a servidores o hosting y unicamente
 ```
  npm i --save-dev sass
 ```
+
+##instalar Gulp
+
+```
+npm i --save-dev gulp
+```
