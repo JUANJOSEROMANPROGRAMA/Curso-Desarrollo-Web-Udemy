@@ -21,10 +21,10 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch src/scss:build/css",
-    "hola": "gulp hola"
-    
+    "dev": "gulp dev"
   },
   "devDependencies": {
+    "gulp-sass": "^6.0.1",
     "sass": "^1.107.1"
   },
   "dependencies": {
