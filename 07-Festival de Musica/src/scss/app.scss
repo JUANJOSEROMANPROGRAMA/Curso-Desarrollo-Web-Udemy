@@ -1,16 +1,27 @@
-/* Variables para las fuentes $nombre:propiedad_css;*/
+/* concetar el archivo de variables en el pprinipal */
 
 
-$Fuente-principal : "Montserrat",
-sans-serif;
+@use 'variables' as var;
 
 
-
+/* para poder usar a variable de la hoja exportada se inicia con . y sigue con la propiedad ....variaables.$fuente_principal;
+ 
+ 
+        la otra opcion seria : @use 'variables' as*;
+        y ya no habria necesidad de referenciar el archivo externo
+ 
+ 
+        o colocar @use 'variables' as hoja2;
+        
+        y refernciar asi.... hoja2.$fuente-principal;
+ 
+ 
+ */
 body {
 
-    font-family: $Fuente-principal;
+    font-family: var.$Fuente-principal;
     font-optical-sizing: auto;
     font-style: normal;
+    background-color: var.$blue;
 
 }
-

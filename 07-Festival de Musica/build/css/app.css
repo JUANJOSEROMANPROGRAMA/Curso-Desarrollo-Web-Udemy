@@ -1,6 +1,26 @@
-/* Variables para las fuentes $nombre:propiedad_css;*/
+/* concetar el archivo de variables en el pprinipal */
+/*1. creando un archivo de variables ,separacion para mantener mejor el codigo
+
+2. al iniciar el archivo en la carpeta scss es necesario empezar el nombre con un guion al principio para indicarle que siga compilando el app.css y no genere una nueva hoja de archivos nueva y aparte
+
+
+*/
+/* para poder usar a variable de la hoja exportada se inicia con . y sigue con la propiedad ....variaables.$fuente_principal;
+
+
+        la otra opcion seria : @use 'variables' as*;
+        y ya no habria necesidad de referenciar el archivo externo
+
+
+        o colocar @use 'variables' as hoja2;
+
+        y refernciar asi.... hoja2.$fuente-principal;
+
+
+ */
 body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  background-color: rgb(19, 50, 226);
 }
