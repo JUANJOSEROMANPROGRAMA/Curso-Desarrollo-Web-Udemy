@@ -1,0 +1,42 @@
+@use '../base/variables' as var;
+
+
+
+.header {
+
+    background-color: var.$verde;
+
+
+    .contenido-header {
+
+        padding: 2rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+
+h1 {
+    color: var.$blanco;
+    margin: 0;
+}
+
+
+
+.navegacion-principal {
+    display: flex;
+    font-size: 2.4rem;
+        gap:2rem;
+    
+
+    a {
+        color: var.$blanco;
+        
+        &:hover{
+        
+        color: var.$amarillo;
+        }
+        
+    }
+}
