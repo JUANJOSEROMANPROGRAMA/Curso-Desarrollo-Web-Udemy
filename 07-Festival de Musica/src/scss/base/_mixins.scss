@@ -50,6 +50,7 @@
     max-width: 120rem;
     margin: 0 auto;
 }
+
 /* 
 @mixin grid {
 
@@ -64,7 +65,7 @@
 /* mixins pasandoñle parametros */
 
 
-@mixin grid($columnas,$gap :5rem) {
+@mixin grid($columnas, $gap :5rem) {
 
     display: grid;
     grid-template-columns: repeat($columnas, 1fr);
@@ -72,18 +73,18 @@
 
 }
 
-@mixin grid_columnas_filas($columnas,$filas,$gap:5rem){
+@mixin grid_columnas_filas($columnas, $filas, $gap: 5rem) {
 
 
     display: grid;
-    grid-template-columns: repeat($columnas,1fr);
-    grid-template-rows: repeat($filas,1fr);
+    grid-template-columns: repeat($columnas, 1fr);
+    grid-template-rows: repeat($filas, 1fr);
     gap: $gap;
-    
+
 
 }
 
-@mixin resetear-lista{
+@mixin resetear-lista {
 
     margin: 0;
     padding: 0;

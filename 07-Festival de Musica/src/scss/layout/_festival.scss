@@ -7,9 +7,9 @@
     @include min.contenedor;
 
     @include min.tablet {
-    
+
         /* se toma el mixin al que se le pasan parametros parametros de grid...especificando 2 columnas */
-        
+
         @include min.grid(2)
     }
 

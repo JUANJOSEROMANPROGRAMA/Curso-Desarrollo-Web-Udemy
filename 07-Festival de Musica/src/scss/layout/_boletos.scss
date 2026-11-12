@@ -1,0 +1,121 @@
+@use '../base/variables' as var;
+@use '../base/mixins' as min;
+@use "sass:color";
+
+
+.contenedor-boletos {
+
+    background-color: var.$verde;
+
+    h3 {
+
+        color: var.$blanco;
+    }
+
+    .boletos {
+        @include min.contenedor;
+
+        @include min.tablet {
+
+            @include min.grid(2);
+
+        }
+    }
+
+
+}
+
+.pase {
+    transition: transform .3s ease-in-out;
+    &:hover {
+
+        transform: scale(1.1);
+    }
+
+
+    /* el $ para heredar la clase  */
+    &-nombre {
+        font-size: 3.6rem;
+        ;
+        font-weight: 900;
+        text-align: center;
+        color: var.$blanco;
+
+    }
+
+    &-header,
+    &-footer {
+
+        padding: .5rem;
+
+        p {
+            text-align: center;
+            color: var.$blanco;
+            margin: 0;
+
+        }
+    }
+
+
+    &-header {
+        background-color: var.$rosa;
+
+
+        p {
+            text-transform: uppercase;
+            font-size: 2.2rem;
+            padding: 1rem 0;
+        }
+
+
+    }
+
+    &-body {
+        background-color: var.$blanco;
+
+        ul {
+
+            @include min.resetear-lista;
+
+            li {
+
+
+                padding: 2rem;
+                border-bottom: 1px solid #e1e1e1;
+            }
+        }
+
+
+    }
+
+
+
+
+
+    &-footer {
+        background-color: var.$blanco;
+        padding: 3rem;
+
+        p {
+            font-size: 2.8rem;
+            font-weight: 900;
+            background-color: var.$morado;
+            padding: 1rem 0;
+            border-radius: 1rem;
+            cursor: pointer;
+
+
+            &:hover {
+
+                background-color: darken(var.$morado, 20%);
+
+            }
+
+
+        }
+    }
+
+
+
+
+}
