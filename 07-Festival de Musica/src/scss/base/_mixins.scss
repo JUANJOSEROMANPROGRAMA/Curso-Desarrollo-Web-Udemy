@@ -71,3 +71,21 @@
     gap: $gap ;
 
 }
+
+@mixin grid_columnas_filas($columnas,$filas,$gap:5rem){
+
+
+    display: grid;
+    grid-template-columns: repeat($columnas,1fr);
+    grid-template-rows: repeat($filas,1fr);
+    gap: $gap;
+    
+
+}
+
+@mixin resetear-lista{
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
