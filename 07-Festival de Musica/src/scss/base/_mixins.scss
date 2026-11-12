@@ -50,3 +50,24 @@
     max-width: 120rem;
     margin: 0 auto;
 }
+/* 
+@mixin grid {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5rem;
+
+}
+
+ */
+
+/* mixins pasandoñle parametros */
+
+
+@mixin grid($columnas,$gap :5rem) {
+
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $gap ;
+
+}

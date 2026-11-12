@@ -7,17 +7,17 @@
     @include min.contenedor;
 
     @include min.tablet {
-
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 5rem;
+    
+        /* se toma el mixin al que se le pasan parametros parametros de grid...especificando 2 columnas */
+        
+        @include min.grid(2)
     }
 
 
 }
 
 .contenido-festival {
-margin-top: 5rem;
+    margin-top: 5rem;
 
 
     h2 {
