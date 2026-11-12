@@ -1,0 +1,26 @@
+@use '../base/variables' as var;
+@use '../base/mixins' as min;
+@use "sass:color";
+
+
+
+
+.footer {
+    background-color: var.$rosa;
+    margin: 0;
+    padding: 3rem;
+
+    .contenedor {
+        display: flex;
+        justify-content: center;
+
+    }
+
+}
+
+    .parrafo-footer {
+        color: var.$blanco;
+        font-size: 2.4  rem;
+        font-weight: 800;
+    }
+
