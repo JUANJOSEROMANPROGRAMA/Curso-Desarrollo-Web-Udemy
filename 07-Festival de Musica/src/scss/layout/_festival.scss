@@ -1,0 +1,38 @@
+@use '../base/variables' as var;
+@use '../base/mixins' as min;
+
+
+.sobre-festival {
+
+    @include min.contenedor;
+
+    @include min.tablet {
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5rem;
+    }
+
+
+}
+
+.contenido-festival {
+margin-top: 5rem;
+
+
+    h2 {
+        margin-bottom: 2rem;
+
+    }
+
+    .fecha {
+
+        color: var.$verde;
+        font-weight: 700;
+
+    }
+
+}
+
+
+.contenido-festival {}
