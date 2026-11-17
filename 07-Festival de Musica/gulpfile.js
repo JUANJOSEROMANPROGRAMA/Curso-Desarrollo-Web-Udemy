@@ -1,4 +1,4 @@
-import { src, dest, watch } from 'gulp';
+import { src, dest, watch ,series} from 'gulp';
 
 
 import gulpSass from 'gulp-sass'
@@ -27,10 +27,20 @@ import * as  dartSaas from 'sass'
 
 
 
-/* uncion que marca que se va compilar saas usando la dependecia de gulpsass */
+/* funcion que marca que se va compilar saas usando la dependecia de gulpsass */
 const sass = gulpSass(dartSaas)
 
 
+
+export function js(done){
+    
+    src('src/js/app.js')
+        .pipe(dest('build/js'))    
+    
+    done()
+
+
+}
 
 export function css(done) {
 
@@ -43,14 +53,24 @@ export function css(done) {
 }
 
 
-/* para aplicar el watch añ gulpfile */
+/* para aplicar el watch al gulpfile */
 export function dev() {
 
 
     /* el watch es una funcion predeterminada que se puede importar desde watch....solo seria llamar la funcion y pasarle como parametro cual es el archivo al que se desea que se le haga seguimiento */
     watch('src/scss/**/*.scss', css)
+    watch('src/js/**/*.js',js)
 
 
 
 
 }
+
+/* export default series lo que hace es que se le pasa por parametros las funciones que se desean para ejecutar en una sola llamada  */
+export default series(js,css,dev)
+
+/* como esta especificada por default al llamar en los script del package.json solo se llama asi
+
+"dev":"gulp"
+
+*/
