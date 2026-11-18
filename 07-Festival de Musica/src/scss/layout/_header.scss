@@ -7,6 +7,20 @@
 
     background-color: var.$verde;
 
+    @include m.tablet {
+
+
+        //esto es para dejar el header fijo al realizar el scroll
+        &.fixed {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            box-shadow: .1rem .2rem .3rem #333;
+
+        }
+
+    }
 
     .contenido-header {
 
