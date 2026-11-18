@@ -496,6 +496,9 @@ body {
   color: #000000;
   font-size: 2rem;
 }
+body.overflow-hidden {
+  overflow: hidden;
+}
 
 p {
   color: #000000;
@@ -852,7 +855,45 @@ h1 {
     gap: 2rem;
   }
 }
+.galeria-imagenes {
+  /* esto para que las imagenes tomen el mismo tamaño las dos */
+}
 .galeria-imagenes img {
   height: 20rem;
   object-fit: cover;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  /* color, transparecnia */
+  background-color: rgba(0, 0, 0, 0.5);
+  display: grid;
+  place-items: center;
+  animation: fadeIn ease-in 0.5s;
+}
+.modal.fade-out {
+  animation: fadeOut ease-in 0.5s;
+}
+.modal img {
+  max-width: 100rem;
+}
+
+/* animacion para cuando se selecciona una imagen */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* animacion para cuando salga la imagen */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

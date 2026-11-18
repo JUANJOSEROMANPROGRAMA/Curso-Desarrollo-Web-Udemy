@@ -28,13 +28,69 @@
         }
 
 
-    img{
-        height: 20rem;
-        object-fit: cover;
+
+        /* esto para que las imagenes tomen el mismo tamaño las dos */
+        img {
+            height: 20rem;
+            object-fit: cover;
+        }
+
+
     }
 
+
+}
+
+.modal {
+
+    position: fixed;
+    inset: 0;
+
+
+    /* color, transparecnia */
+    background-color: rgba(var.$negro, 0.5);
+
+    display: grid;
+    place-items: center;
+
+    // se llama la seleccion
+    animation: fadeIn ease-in 0.5s;
+
+    &.fade-out {
     
+    animation: fadeOut ease-in 0.5s;
+        
     }
 
+    img {
 
+        max-width: 100rem;
+
+    }
+}
+
+/* animacion para cuando se selecciona una imagen */
+@keyframes fadeIn {
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* animacion para cuando salga la imagen */
+
+@keyframes fadeOut {
+
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
