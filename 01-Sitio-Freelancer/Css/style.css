@@ -204,7 +204,7 @@ h3 {
 
 /* Seccion Hero */
 .hero {
-    background-image: url(/01-Sitio-Freelancer/Imagenes/hero.jpg);
+    background-image: url(../Imagenes/hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 450px;
