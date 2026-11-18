@@ -13,8 +13,8 @@
     .overlay {
         position: absolute;
         background: linear-gradient(270deg,
-                rgba(var.$morado, 60%),
-                rgba(darken(var.$morado, 20%), 90%));
+                color.change(var.$morado, $alpha: 0.6),
+                color.change(color.adjust(var.$morado, $lightness: -20%), $alpha: 0.9));
         inset: 0;
 
         display: flex;

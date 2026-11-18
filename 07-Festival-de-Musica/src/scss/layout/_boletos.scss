@@ -107,7 +107,7 @@
 
             &:hover {
 
-                background-color: darken(var.$morado, 20%);
+                background-color: color.adjust(var.$morado, $lightness: -20%);
 
             }
 

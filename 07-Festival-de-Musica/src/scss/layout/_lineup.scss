@@ -74,7 +74,7 @@
 
     li:nth-child(odd) {
 
-        background-color: lighten(var.$amarillo,5%);
+        background-color: color.adjust(var.$amarillo, $lightness: 5%);
     }
 
 }
@@ -86,5 +86,5 @@
 
     li:nth-child(odd) {
 
-        background-color: lighten(var.$verde,5%);
+        background-color: color.adjust(var.$verde, $lightness: 5%);
     }}
