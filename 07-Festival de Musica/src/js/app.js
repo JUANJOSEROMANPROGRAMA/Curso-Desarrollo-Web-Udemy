@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function name() {
 
     navegacionFija();
     CrearGaleria();
+    resaltarEnlace();
 
 })
 
@@ -13,17 +14,17 @@ function navegacionFija() {
 
 
     window.addEventListener('scroll', function () {
-            
-            
-            // esto verfica si ya se dio scroll lo suficiente para pasar el elemento
-            if(sobreFestival.getBoundingClientRect().bottom < 1){
-                header.classList.add('fixed')
-            
-            
-            }else{
-            
-                header.classList.remove('fixed')
-            }
+
+
+        // esto verfica si ya se dio scroll lo suficiente para pasar el elemento
+        if (sobreFestival.getBoundingClientRect().bottom < 1) {
+            header.classList.add('fixed')
+
+
+        } else {
+
+            header.classList.remove('fixed')
+        }
     })
 
 }
@@ -117,4 +118,32 @@ function cerrarModal() {
     }, 500);
 
 
+}
+
+
+
+function resaltarEnlace() {
+
+    document.addEventListener('scroll', function () {
+        const sections = document.querySelectorAll('section')
+        const navlinks = document.querySelectorAll('.navegacion-principal a')
+
+        let actual = ' ';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop
+            const sectionHeight = section.clientHeight
+
+            //operacion para detectar que seccion esta mas visible en el navegador 
+            if (window.scrollY >= (sectionTop - sectionHeight / 3)) {
+                actual = section.id
+            }
+        })
+
+        navlinks.forEach(link => {
+            link.classList.remove('active')
+            if (link.getAttribute('href') === '#' + actual) {
+                link.classList.add('active')
+            }
+        })
+    })
 }

@@ -606,7 +606,7 @@ h1 {
 .navegacion-principal a {
   color: #FFFFFF;
 }
-.navegacion-principal a:hover {
+.navegacion-principal a:hover, .navegacion-principal a.active {
   color: #fdda00;
 }
 
