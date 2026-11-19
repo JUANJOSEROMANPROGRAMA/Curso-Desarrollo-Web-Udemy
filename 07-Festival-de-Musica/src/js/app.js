@@ -37,26 +37,35 @@ function CrearGaleria() {
     const cantidad_imagenes = 16;
     const galeria = document.querySelector('.galeria-imagenes')
 
-
+// se crea el for para la recorrer por la cantidad de imagens
     for (let i = 1; i <= cantidad_imagenes; i++) {
 
+        // se cre la variable que es la encargada de crear las imagenes
         const imagen = document.createElement('IMG')
 
-        imagen.src = `src/img/gallery/full/${i}.jpg`
+
+        //se agrega el atributo lazy y se le asigna un tamaño
+        imagen.loading = 'lazy'
+        imagen.width = "300"
+        imagen.height = "200"
+
+        //se le asigna la ruta al src donde se encontrara la imagen
+        imagen.src = `src/img/gallery/thumb/${i}.jpg`
+        
+        // se le asigna la descripcion de la imagen
         imagen.alt = 'Imagen Galeria'
 
 
 
-        //event Handler
+        //event Handler....para cuando se da click sobre la imagen llamar la funcion que muestra la imagen
 
         imagen.onclick = function () {
-
-            //alert('diste click')
+            
             mostrarImagen(i);
         }
 
 
-
+        // se agrega la imagen al html
         galeria.appendChild(imagen)
     }
 
