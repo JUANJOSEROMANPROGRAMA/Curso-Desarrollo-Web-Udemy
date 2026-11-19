@@ -1,5 +1,6 @@
 import path from 'path'
 import fs from 'fs'
+import {glob } from 'glob'
 
 import { src, dest, watch, series } from 'gulp';
 
@@ -89,6 +90,37 @@ export async function crop(done) {
 }
 
 
+// busca las imagenes paraconvertirlas a webp
+export async function imagenes(done) {
+    const srcDir = './src/img';
+    const buildDir = './build/img';
+    const images = await glob('./src/img/**/*{jpg,png}')
+
+    images.forEach(file => {
+        const relativePath = path.relative(srcDir, path.dirname(file));
+        const outputSubDir = path.join(buildDir, relativePath);
+        procesarImagenes(file, outputSubDir);
+    });
+    done();
+}
+
+function procesarImagenes(file, outputSubDir) {
+    if (!fs.existsSync(outputSubDir)) {
+        fs.mkdirSync(outputSubDir, { recursive: true })
+    }
+    const baseName = path.basename(file, path.extname(file))
+    const extName = path.extname(file)
+    const outputFile = path.join(outputSubDir, `${baseName}${extName}`)
+    const outputFileWebp = path.join(outputSubDir, `${baseName}.webp`)
+
+    const options = { quality: 80 }
+    sharp(file).jpeg(options).toFile(outputFile)
+    sharp(file).webp(options).toFile(outputFileWebp)
+}
+
+
+
+
 /* para aplicar el watch al gulpfile */
 export function dev() {
 
@@ -96,6 +128,8 @@ export function dev() {
     /* el watch es una funcion predeterminada que se puede importar desde watch....solo seria llamar la funcion y pasarle como parametro cual es el archivo al que se desea que se le haga seguimiento */
     watch('src/scss/**/*.scss', css)
     watch('src/js/**/*.js', js)
+    watch('src/js/**/*.{png.jpg}', imagenes)
+    
 
 
 
@@ -103,7 +137,7 @@ export function dev() {
 }
 
 /* export default series lo que hace es que se le pasa por parametros las funciones que se desean para ejecutar en una sola llamada  */
-export default series(crop,js, css, dev)
+export default series(crop, js, css,imagenes, dev)
 
 /* como esta especificada por default al llamar en los script del package.json solo se llama asi
 
