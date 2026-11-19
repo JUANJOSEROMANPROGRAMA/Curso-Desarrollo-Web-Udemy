@@ -8,9 +8,9 @@
     <!-- FUENTE -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link 
+    <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet" >
+        rel="stylesheet">
 
 
     <!-- CSS -->
@@ -61,7 +61,15 @@
     <section class="sobre-festival">
 
         <div class="imagen">
-            <img width="300" height="200" loading="lazy" src="/src/img/imagen_dj.jpg" alt="sobre festival">
+            
+                <!-- la etiqueyta picture para trabjar con los 3 formatos de imagenes -->
+            <picture>
+                <source src="build/img/imagen_dj.avif" type="imagen/avif">
+                <source src="build/img/imagen_dj.webp" type="imagen/webp">
+
+
+                <img width="300" height="200" loading="lazy" src="build/img/imagen_dj.jpg" alt="sobre festival">
+            </picture>
 
         </div>
 
@@ -249,7 +257,7 @@
 
             </p>
         </div>
-        
+
 
 
     </footer>

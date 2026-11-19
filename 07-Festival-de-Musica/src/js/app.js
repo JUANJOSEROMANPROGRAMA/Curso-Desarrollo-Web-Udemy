@@ -32,7 +32,7 @@ function navegacionFija() {
 
 
 
-function CrearGaleria() {
+/* function CrearGaleria() {
 
     const cantidad_imagenes = 16;
     const galeria = document.querySelector('.galeria-imagenes')
@@ -69,16 +69,50 @@ function CrearGaleria() {
         galeria.appendChild(imagen)
     }
 
+} */
+
+function CrearGaleria() {
+
+    const cantidad_imagenes = 16;
+    const galeria = document.querySelector('.galeria-imagenes')
+
+    // se crea el for para la recorrer por la cantidad de imagens
+    for (let i = 1; i <= cantidad_imagenes; i++) {
+
+        // se cre la variable que es la encargada de crear las imagenes
+        const imagen = document.createElement('PICTURE')
+
+        imagen.innerHTML = `
+    <source srcset="build/img/gallery/thumb/${i}.avif" type="image/avif">
+    <source srcset="build/img/gallery/thumb/${i}.webp" type="image/webp">
+    <img loading="lazy" width="200" height="300" src="build/img/gallery/thumb/${i}.jpg" alt="imagen galeria">
+`;
+
+
+        //event Handler....para cuando se da click sobre la imagen llamar la funcion que muestra la imagen
+
+        imagen.onclick = function () {
+
+            mostrarImagen(i);
+        }
+
+
+        // se agrega la imagen al html
+        galeria.appendChild(imagen)
+    }
+
 }
 
 
 function mostrarImagen(i) {
 
-    const imagen = document.createElement('IMG')
+    const imagen = document.createElement('PICTURE')
 
-    imagen.src = `src/img/gallery/full/${i}.jpg`
-    imagen.alt = 'Imagen Galeria'
-
+    imagen.innerHTML = `
+    <source srcset="build/img/gallery/full/${i}.avif" type="image/avif">
+    <source srcset="build/img/gallery/thumb/${i}.webp" type="image/webp">
+    <img loading="lazy" width="200" height="300" src="build/img/gallery/thumb/${i}.jpg" alt="imagen galeria">
+`;
 
 
 
@@ -159,23 +193,23 @@ function resaltarEnlace() {
 }
 
 
-function ScrollNav(){
+function ScrollNav() {
 
-    const navLinks= document.querySelectorAll('.navegacion-principal a')
+    const navLinks = document.querySelectorAll('.navegacion-principal a')
 
-    
-    navLinks.forEach(link =>{
-    
-        link.addEventListener('click', e=>{
-        
-        e.preventDefault()
-        const seccionScroll = e.target.getAttribute('href')
-        const section = document.querySelector(seccionScroll)
-        
-        section.scrollIntoView({behavior: 'smooth'})
-        
+
+    navLinks.forEach(link => {
+
+        link.addEventListener('click', e => {
+
+            e.preventDefault()
+            const seccionScroll = e.target.getAttribute('href')
+            const section = document.querySelector(seccionScroll)
+
+            section.scrollIntoView({ behavior: 'smooth' })
+
         })
-    
+
     })
 
 
