@@ -26,7 +26,8 @@
   "devDependencies": {
     "gulp-sass": "^6.0.1",
     "gulp-terser": "^2.1.0",
-    "sass": "^1.107.1"
+    "sass": "^1.107.1",
+    "sharp": "^0.35.5"
   },
   "dependencies": {
     "gulp": "^5.0.1"
